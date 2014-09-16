@@ -13,7 +13,6 @@
 
   var OPTIONS = {
     service                      : DEFAULT_SERVICE,
-    assets                       : PROTOCOL+'assets.transloadit.com/',
     onFileSelect                 : function() {},
     onStart                      : function() {},
     onProgress                   : function() {},
@@ -168,7 +167,6 @@
       self._options.onFileSelect($(this).val(), $(this));
     });
 
-    this.includeCss();
   };
 
   Uploader.prototype.getBoredInstance = function() {
@@ -824,16 +822,6 @@
         }
       }
     );
-  };
-
-  Uploader.prototype.includeCss = function() {
-    if (CSS_LOADED || !this._options.modal) {
-      return;
-    }
-
-    CSS_LOADED = true;
-    $('<link rel="stylesheet" type="text/css" href="' + this._options.assets + 'css/transloadit2.css" />')
-      .appendTo('head');
   };
 
   Uploader.prototype.getUTCDatetime = function() {
