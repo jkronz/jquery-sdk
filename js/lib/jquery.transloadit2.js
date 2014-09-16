@@ -657,7 +657,7 @@
     this.$modal =
       $('<div id="transloadit">'+
         '<div class="content">'+
-          '<a href="#close" class="close">'+ this.i18n('cancel') +'</a>'+
+          '<a href="#close" class="close"><i class="fa fa-close"></i><span class="sr-only">Cancel</span></a>'+
           '<p class="status"></p>'+
           '<div class="progress progress-striped active">' +
             '<div class="bar"><span class="percent"></span></div>' +
